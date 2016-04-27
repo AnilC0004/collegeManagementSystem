@@ -10,13 +10,24 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
 
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.sql.DataSource;
+
+
+
+
+
+
 public class DBManagement {
+	private Connection conn;
 	private final String DRIVER ;
 	private final String _dbURL;
 	private final String _username;
 	private final String _password;
 	private final String _dbname;
-	private Connection conn;
+	
 	public DBManagement() throws IOException {
 		System.out.println(new File(".").getAbsolutePath());
 		Properties props = new Properties();
@@ -30,13 +41,19 @@ public class DBManagement {
 		System.out.println(_username +_password+_dbURL+_dbname+DRIVER);
 		}
 
-	public void setConnection() throws SQLException,ClassNotFoundException {
+	public void setConnection() throws SQLException,ClassNotFoundException, NamingException {
 		
 			 Class.forName(DRIVER);
 			 conn = DriverManager.getConnection(_dbURL,_username,_password);
 			 System.out.println(String.format(" %s Database:got connection as %s\n"
 					, _dbname
-					, _username));	
+					, _username));
+					/*   InitialContext initContext = null;
+			 Context envContext = null;
+			 initContext = new InitialContext();
+			 envContext = (Context)initContext.lookup("java:comp/env");
+			 DataSource ds = (DataSource)envContext.lookup("jdbc/scott");
+		     conn = ds.getConnection();;*/	
 		  
 	}
 	public ResultSet getResultSet(String query) throws SQLException
@@ -60,13 +77,15 @@ public class DBManagement {
 		return rows;
 		
 	}
-		
 	public String getConnectionDetails() {
 
 		return String.format("%s Database:attempting connection as %s\n"
 				, _dbname
 				, _username);
 		
+	}
+	public Connection getConn() {
+		return conn;
 	}
 }
 

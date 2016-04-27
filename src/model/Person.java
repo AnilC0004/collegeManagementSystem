@@ -6,6 +6,7 @@ public class Person {
 	private String password;
 	private String imageURL;
 	private String phoneNo;
+	private String position;
 	public String getName() {
 		return name;
 	}
@@ -14,6 +15,22 @@ public class Person {
 		this.name = name;
 	}
 	
+	public String getPhoneNo() {
+		return phoneNo;
+	}
+
+	public void setPhoneNo(String phoneNo) {
+		this.phoneNo = phoneNo;
+	}
+
+	public String getPosition() {
+		return position;
+	}
+
+	public void setPosition(String position) {
+		this.position = position;
+	}
+
 	public String getEmailID() {
 		return emailID;
 	}

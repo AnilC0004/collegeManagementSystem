@@ -29,6 +29,10 @@ public class Logout extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		HttpSession session =  request.getSession(false);
+		System.out.println("cleared password,logout.....");
+		response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+		request.removeAttribute("password");
+		//request.setAttribute("password", "");
 		session.removeAttribute("person");
 		session.invalidate();
 		response.sendRedirect("Home.jsp");

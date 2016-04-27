@@ -17,14 +17,10 @@
     <filter-name>SessionValidator</filter-name>
     <filter-class>filter.SessionValidator</filter-class>
   </filter>
-  <filter-mapping>
-    <filter-name>NoChacheFilter</filter-name>
-    <url-pattern>/app/*</url-pattern>
-    <dispatcher>FORWARD</dispatcher>
-    <dispatcher>REQUEST</dispatcher>
-  </filter-mapping>
-  <filter-mapping>
-    <filter-name>SessionValidator</filter-name>
-    <url-pattern>/app/*</url-pattern>
-  </filter-mapping>
+  <resource-ref>
+    <description>Oracle Datasource</description>
+    <res-ref-name>jdbc/scott</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
+  </resource-ref>
 </web-app>

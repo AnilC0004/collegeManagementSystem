@@ -49,7 +49,7 @@ public class SessionValidator implements Filter {
 		// String forwardTo = (String) session.getAttribute("forwardTo");
 
 		if (person == null) {
-			res.sendRedirect(req.getContextPath()+"/Home.jsp");
+			res.sendRedirect(req.getContextPath()+"/LoginPage.jsp?msg=Please login to continue");
 		} else {
 			chain.doFilter(req, res);
 		}

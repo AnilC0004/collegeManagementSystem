@@ -2,6 +2,9 @@ package model;
 
 public class Student extends DepartmentMember{
 	
+	public Student() {
+		setPosition("Student");
+	}
 	 public String getEnrollmentNo() {
 		return enrollmentNo;
 	}

@@ -7,7 +7,10 @@ public class HOD extends Person {
 	private String deptName;
 	private int StudentCount;
 	private int facultyCount;
-	
+
+	public HOD() {
+		setPosition("HOD");
+	}
 	public String getCollegeID() {
 		return collegeID;
 	}

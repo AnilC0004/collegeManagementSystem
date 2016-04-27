@@ -5,6 +5,13 @@ public class Director extends Person {
 	private String collegeName;
 	private String collegeLocation;
 	
+	public Director() {
+		setPosition("Director");
+	}
+	
+	
+
+	
 	public String getCollegeID() {
 		return collegeID;
 	}
