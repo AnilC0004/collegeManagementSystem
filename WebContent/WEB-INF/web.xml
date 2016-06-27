@@ -9,6 +9,14 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <context-param>
+    <param-name>imgPath</param-name>
+    <param-value>/C:/Users/AC/attendanceSystem/CollegeManagementSystem/WebContent/images/</param-value>
+  </context-param>
+  <context-param>
+    <param-name>webContentPath</param-name>
+    <param-value>C:/Users/AC/attendanceSystem/CollegeManagementSystem/WebContent</param-value>
+  </context-param>
   <filter>
     <filter-name>NoChacheFilter</filter-name>
     <filter-class>filter.NoChacheFilter</filter-class>
@@ -17,6 +25,11 @@
     <filter-name>SessionValidator</filter-name>
     <filter-class>filter.SessionValidator</filter-class>
   </filter>
+  <filter-mapping>
+    <filter-name>NoChacheFilter</filter-name>
+    <url-pattern>/app/*</url-pattern>
+    <url-pattern>/images/*</url-pattern>
+  </filter-mapping>
   <resource-ref>
     <description>Oracle Datasource</description>
     <res-ref-name>jdbc/scott</res-ref-name>

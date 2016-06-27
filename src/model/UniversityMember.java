@@ -2,28 +2,29 @@ package model;
 
 public class UniversityMember extends Person{
 	
-	public String getuID() {
-		return uID;
-	}
-	public void setuID(String uID) {
-		this.uID = uID;
-	}
-	public String getuName() {
-		return uName;
-	}
-	public void setuName(String uName) {
-		this.uName = uName;
-	}
-	public String getuLoc() {
-		return uLoc;
-	}
-	public void setuLoc(String uLoc) {
-		this.uLoc = uLoc;
-	}
-	private String uID;
-	private String uName;
-	private String uLoc;
+	private String universityID;
+	private String universityName;
+	private String universityLoc;
 	
+	public String getUniversityID() {
+		return universityID;
+	}
+	public void setUniversityID(String universityID) {
+		this.universityID = universityID;
+	}
+	public String getUniversityName() {
+		return universityName;
+	}
+	public void setUniversityName(String universityName) {
+		this.universityName = universityName;
+	}
+	public String getUniversityLoc() {
+		return universityLoc;
+	}
+	public void setUniversityLoc(String universityLoc) {
+		this.universityLoc = universityLoc;
+	}
+
 	
 
 }

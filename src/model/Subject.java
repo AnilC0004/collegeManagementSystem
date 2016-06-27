@@ -1,16 +1,31 @@
 package model;
 
 
-/**
- * Created by GAURAV on 21-03-2016.
- */
 public class Subject {
     private String subjCode;
     private String subjName;
     private char className;
-    private int sem;
+    private Integer sem;
+    private String courseID;
+    private String subCourseID;
 
-    public String getSubjCode() {
+    public String getCourseID() {
+		return courseID;
+	}
+
+	public void setCourseID(String courseID) {
+		this.courseID = courseID;
+	}
+
+	public String getSubCourseID() {
+		return subCourseID;
+	}
+
+	public void setSubCourseID(String subCourseID) {
+		this.subCourseID = subCourseID;
+	}
+
+	public String getSubjCode() {
         return subjCode;
     }
 
@@ -34,11 +49,11 @@ public class Subject {
         this.className = className;
     }
 
-    public int getSem() {
+    public Integer getSem() {
         return sem;
     }
 
-    public void setSem(int sem) {
+    public void setSem(Integer sem) {
         this.sem = sem;
     }
 }

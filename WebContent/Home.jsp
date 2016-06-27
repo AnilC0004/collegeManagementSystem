@@ -327,7 +327,7 @@ translateY
 		</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="HomePage.jsp" selected>HOME</a></li>
+				<li><a href="Home.jsp" selected>HOME</a></li>
 				<li><a href="#a">ABOUT US</a></li>
 				<li><a href="Contact.jsp">CONTACT</a></li>
 				<li><a href="LoginPage.jsp">LOGIN</a></li>
@@ -343,7 +343,7 @@ translateY
 			<div class="panel panel-default">
 				<div class="panel-heading"><span style="font-size: 2em;">Events</span>
 				<form class="form-inline">
-				<select id="state" class="form-control"  placeholder="select state">
+				<select id="state" class="form-control"  >
 				</select>
 				<select id="university" class="form-control"  placeholder="select university">
 				</select>
@@ -372,7 +372,9 @@ translateY
 	$(document).ready(function() {
 	
 		initStates();
+		$('#news').html('<div class="jumbotron"><h3 align="center">No Current Events in this university</h3></div>');
 		$('#state').on('change',function(){
+			$('#news').html('<div class="jumbotron"><h3 align="center">No Current Events in this university</h3></div>');
 			//alert($(this).val());
 			$.getJSON('publicJSON/StateToUniversity/'+$(this).val(),function(data){
 				//if(data !=''){
@@ -382,14 +384,13 @@ translateY
 		});
 		
 		$('#university').on('change',function(){
+			$('#news').html('<div class="jumbotron"><h3 align="center">No Current Events in this university</h3></div>');
+
 			//alert($(this).val());
 			$.getJSON('publicJSON/Events/'+$(this).val(),function(data){
 				if(data !=''){
 					getNews(data)
 				}
-				else{
-					$('#news').html("NO events");			
-					}
 			});
 		});
 		
@@ -399,7 +400,7 @@ translateY
 					getNews(data)
 				}
 				else{
-					$('#news').html("NO events");			
+					$('#news').html('<div class="jumbotron"><h3 align="center">No Current Events in this university</h3></div>');			
 					}
 			});
 		});

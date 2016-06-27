@@ -1,79 +1,378 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>CONTACT PAGE</title>
-<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--  
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
--->
-<link rel="stylesheet" href="bootstrap-3.3.6-dist/css/bootstrap.min.css">
-<script src="jquery.js"></script>
-<script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
-
-<style> 
-body{
-background-color:#e6eeff;
-}
-
-</style>
-
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<title>Landing Page Template</title>
+<!-- BOOTSTRAP CORE STYLE CSS -->
+<link href="assets/css/bootstrap.css" rel="stylesheet" />
+<!-- FONT AWESOME CSS -->
+<link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+<!-- STYLE SWITCHER  CSS -->
+<link href="assets/css/styleSwitcher.css" rel="stylesheet" />
+<!-- CUSTOM STYLE CSS -->
+<link href="assets/css/style.css" rel="stylesheet" />
+<!--GREEN STYLE VERSION IS BY DEFAULT, USE ANY ONE STYLESHEET FROM TWO STYLESHEETS (green or red) HERE-->
+<link href="assets/css/themes/green.css" id="mainCSS" rel="stylesheet" />
+<!-- Google	Fonts -->
+<link
+	href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300'
+	rel='stylesheet' type='text/css' />
 </head>
 <body>
+	<div class="switcher" style="left: -50px;">
+		<a id="switch-panel" class="hide-panel"> <i class="fa fa-recycle"></i>
 
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#myPage">Logo</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="HomePage1.jsp">HOME</a></li>        
-        <li><a href="#about">ABOUT US</a></li>
-        <li><a href="Contact.jsp">CONTACT</a></li>
-        <li><a href="LoginPage.jsp">LOGIN</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+		</a>
+		<p style="font-size: 10px">choose</p>
+		<ul class="colors-list">
+			<li><a title="Green" id="green" class="green"></a></li>
+			<li><a title="Red" id="red" class="red"></a></li>
+		</ul>
+	</div>
+	<!--END STYLE SWITCHER-->
+	<div class="navbar navbar-inverse navbar-fixed-top move-me" id="menu">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target=".navbar-collapse">
+					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"><img class="logo-custom"
+					src="assets/img/logo180-50.png" alt="" /></a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#home">HOME</a></li>
+					<li><a href="#features">FEATURES</a></li>
 
-<div id="contact" class="container-fluid bg-grey">
-  <h2 class="text-center">CONTACT</h2>
-  <div class="row">
-    <div class="col-sm-5">
-      <p>Contact us and we'll get back to you within 24 hours.</p>
-      <p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
-      <p><span class="glyphicon glyphicon-phone"></span> +91 7509435425</p>
-      <p><span class="glyphicon glyphicon-envelope"></span> mukeshpawar2210@gmail.com</p>	   
-    </div>
-    <div class="col-sm-7 slideanim">
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-        </div>
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-        </div>
-      </div>
-      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
-      <div class="row">
-        <div class="col-sm-12 form-group">
-          <button class="btn btn-default pull-right" type="submit">Send</button>
-        </div>
-      </div>	
-    </div>
-  </div>
-</div>
+					<li><a href="#developers">DEVELOPERS</a></li>
+					<li><a href="#pricing">PRICING</a></li>
+					<li><a href="#contact">CONTACT</a></li>
+					<li><a href="mailto:info@domain.com?Subject=Product%20Enquiry"
+						target="_top"> <i class="fa fa-envelope-o"></i><span
+							class="home-mail">e-mail: info@domain.com</span></a></li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+	<!--NAVBAR SECTION END-->
+	<section class="header-sec" id="home">
+		<div class="overlay">
+			<div class="container">
+				<div class="row text-center">
+
+					<div
+						class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+
+						<h2 data-scroll-reveal="enter from the bottom after 0.1s">
+							<strong> Land Your Services in Style </strong>
+						</h2>
+
+						<p data-scroll-reveal="enter from the bottom after 0.8s">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+							pretium lectus vel Lorem ipsum dolor sit amet, consectetur
+							adipiscing elit. Lorem ipsum dolor sit amet, consectetur
+							adipiscing elit. Nulla pretium lectus vel Lorem ipsum dolor sit
+							amet, consectetur adipiscing elit.</p>
+
+						<br />
+
+
+
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</section>
+	<!--HEADER SECTION END-->
+	<section class="features" id="features">
+		<div class="container">
+			<div class="row text-center">
+
+				<div
+					class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+
+					<h3 data-scroll-reveal="enter from the bottom after 0.1s">
+						<strong> Awesome Features </strong>
+					</h3>
+
+				</div>
+
+			</div>
+			<div class="row ">
+
+				<div class="col-lg-6 col-md-6 col-sm-6"
+					data-scroll-reveal="enter from the left after 0.4s">
+					<div class="media">
+						<div class="pull-left">
+							<i class=" fa fa-history fa-5x "></i>
+
+						</div>
+						<div class="media-body">
+							<h4 class="media-heading">
+								<strong> Responsive Layout </strong>
+							</h4>
+							<p>Aenean faucibus luctus enim. Duis quis sem risu suspend
+								lacinia elementum nunc. Aenean faucibus luctus enim. Duis quis
+								sem risu suspend lacinia elementum nunc.</p>
+
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6"
+					data-scroll-reveal="enter from the right after 0.7s">
+					<div class="media">
+						<div class="pull-left">
+							<i class=" fa fa-ra fa-5x "></i>
+
+						</div>
+						<div class="media-body">
+							<h4 class="media-heading">
+								<strong> Easy Customization </strong>
+							</h4>
+							<p>Aenean faucibus luctus enim. Duis quis sem risu suspend
+								lacinia elementum nunc. Aenean faucibus luctus enim. Duis quis
+								sem risu suspend lacinia elementum nunc.</p>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="row text-center just-pad">
+
+				<div class="col-lg-4 col-md-4 col-sm-4"
+					data-scroll-reveal="enter from the bottom after 0.2s">
+					<i class=" fa fa-database fa-5x "></i>
+					<h4>
+						<strong> Easy Understanding </strong>
+					</h4>
+					<p>Aenean faucibus luctus enim. Duis quis sem risu suspend
+						lacinia elementum nunc. Aenean faucibus luctus enim. Duis quis sem
+						risu suspend lacinia elementum nunc.</p>
+				</div>
+
+				<div class="col-lg-4 col-md-4 col-sm-4"
+					data-scroll-reveal="enter from the bottom after 0.8s">
+					<i class=" fa fa-send fa-5x "></i>
+					<h4>
+						<strong> Awesomeness Loaded </strong>
+					</h4>
+					<p>Aenean faucibus luctus enim. Duis quis sem risu suspend
+						lacinia elementum nunc. Aenean faucibus luctus enim. Duis quis sem
+						risu suspend lacinia elementum nunc.</p>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-4"
+					data-scroll-reveal="enter from the bottom after 1.4s">
+					<i class=" fa fa-puzzle-piece fa-5x "></i>
+					<h4>
+						<strong> Freely Available </strong>
+					</h4>
+					<p>Aenean faucibus luctus enim. Duis quis sem risu suspend
+						lacinia elementum nunc. Aenean faucibus luctus enim. Duis quis sem
+						risu suspend lacinia elementum nunc.</p>
+				</div>
+			</div>
+		</div>
+
+	</section>
+	<!--FEATURES SECTION END-->
+	<section class="testi-sec">
+		<div class="overlay">
+			<div class="container">
+				<div class="row text-center">
+
+					<div
+						class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+
+						<h3 data-scroll-reveal="enter from the bottom after 0.1s">
+							<strong> What Our Clients Says </strong>
+						</h3>
+
+						<h4 data-scroll-reveal="enter from the bottom after 0.8s">
+							<i class="fa fa-quote-left "></i> Lorem ipsum dolor sit amet,
+							consectetur adipiscing elit. Nulla pretium lectus vel Lorem ipsum
+							dolor sit amet, consectetur adipiscing elit. <i
+								class="fa fa-quote-right "></i> <br /> <span class="pull-right"><strong>-Jimmy
+									Kelly</strong></span>
+						</h4>
+
+
+
+
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</section>
+	<!--TESTIMONIAL SECTION END-->
+	<section class="developers" id="developers">
+		<div class="container">
+			<div class="row text-center">
+
+				<div
+					class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+
+					<h3 data-scroll-reveal="enter from the bottom after 0.1s">
+						<strong> Our Developers </strong>
+					</h3>
+
+
+
+
+
+				</div>
+
+			</div>
+
+			<div class="row ">
+
+				<div class="col-lg-4 col-md-4 col-sm-4"
+					data-scroll-reveal="enter from the left after 0.2s">
+
+					<img src="assets/img/1.jpg" class="img-circle img-responsive"
+						alt="" />
+					<h4>
+						<strong> Cheiu Linewasa </strong>
+					</h4>
+					<i>Lead Designer</i>
+					<p>Aenean faucibus luctus enim. Duis quis sem risu suspend
+						lacinia elementum nunc.</p>
+
+				</div>
+
+				<div class="col-lg-4 col-md-4 col-sm-4"
+					data-scroll-reveal="enter from the bottom after 0.4s">
+					<img src="assets/img/2.jpg" class="img-circle img-responsive"
+						alt="" />
+					<h4>
+						<strong>Aexano Teranxsa </strong>
+					</h4>
+					<i>Serior Analyst</i>
+					<p>Aenean faucibus luctus enim. Duis quis sem risu suspend
+						lacinia elementum nunc.</p>
+
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-4"
+					data-scroll-reveal="enter from the right after 0.2s">
+					<img src="assets/img/3.jpg" class="img-circle img-responsive"
+						alt="" />
+					<h4>
+						<strong> Zineesa Renaiqn </strong>
+					</h4>
+					<i>Lead Developer</i>
+					<p>Aenean faucibus luctus enim. Duis quis sem risu suspend
+						lacinia elementum nunc.</p>
+
+				</div>
+			</div>
+		</div>
+
+	</section>
+	<!--DEVELOPERS SECTION END-->
+	<section class="price-sec text-center " id="pricing">
+
+
+
+		<div class="col-lg-6  col-md-6 col-sm-6 single-price"
+			data-scroll-reveal="enter from the left after 0.2s">
+
+			<span>199 <i class="fa fa-dollar"></i></span>
+
+			<h1>SINGLE LICENSE</h1>
+
+
+
+
+
+		</div>
+		<div class="col-lg-6  col-md-6 col-sm-6 multi-price"
+			data-scroll-reveal="enter from the right after 0.2s">
+
+
+			<span>890 <i class="fa fa-dollar"></i></span>
+			<h1>MULTIPLE LICENSE</h1>
+
+
+
+
+		</div>
+
+
+	</section>
+	<!--PRICING SECTION END-->
+	<section class="contact" id="contact">
+		<div class="container">
+			<div class="row text-center ">
+
+				<div
+					class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+
+					<h3 data-scroll-reveal="enter from the bottom after 0.1s">
+						<strong> Stay Connected </strong>
+					</h3>
+
+				</div>
+
+			</div>
+
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-6"
+					data-scroll-reveal="enter from the right after 0.2s">
+					<strong>ADDRESS :</strong>
+					<p>
+						2234/908, Newyork City , <br /> USA - 002301 <br /> email:
+						info@domain.com
+
+					</p>
+
+
+
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6"
+					data-scroll-reveal="enter from the left after 0.4s">
+					<strong>Just Small Text</strong>
+					<p>Aenean faucibus luctus enim. Duis quis sem risu suspend
+						lacinia elementum nunc.</p>
+
+
+				</div>
+
+			</div>
+
+		</div>
+	</section>
+	<!--CONTACT SECTION END-->
+	<div class="myfooter">
+		&copy; 2014 yourdomain.com | by: <a href="http://binarytheme.com"
+			style="color: #fff;" target="_blank">www.binarytheme.com</a>
+
+	</div>
+	<!--FOOTER SECTION END-->
+	<!--  Jquery Core Script -->
+	<script src="assets/js/jquery-1.10.2.js"></script>
+	<!--  Core Bootstrap Script -->
+	<script src="assets/js/bootstrap.js"></script>
+	<!--  Scrolling Reveal Script -->
+	<script src="assets/js/scrollReveal.js"></script>
+	<!--  Scroll Scripts -->
+	<script src="assets/js/jquery.easing.min.js"></script>
+	<!--  Style Switcher Scripts -->
+	<script src="assets/js/styleSwitcher.js"></script>
+	<!--  Custom Scripts -->
+	<script src="assets/js/custom.js"></script>
 
 </body>
 </html>

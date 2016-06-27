@@ -9,30 +9,50 @@ import java.util.ArrayList;
  */
 public class Course {
     
-    private String courseId;
-    private String subcourseId;
-    private ArrayList<Subject> sub=new ArrayList<Subject>();
+    private String courseID;
+    private String courseName;
+    private String subcourseID;
+    private ArrayList<SubCourse> sub= new ArrayList<SubCourse>();
+    private Integer semesterCount;
+    
+    public int getSemesterCount() {
+		return semesterCount;
+	}
 
-    public String getCourseId() {
-        return courseId;
+	public void setSemesterCount(int semesterCount) {
+		this.semesterCount = semesterCount;
+	}
+
+	public String getCourseName() {
+		return courseName;
+	}
+
+	public void setCourseName(String courseName) {
+		this.courseName = courseName;
+	}
+
+	
+
+    public String getCourseID() {
+        return courseID;
     }
 
-    public void setCourseId(String courseId) {
-        this.courseId = courseId;
+    public void setCourseID(String courseID) {
+        this.courseID = courseID;
     }
 
-    public String getSubcourseId() {
-        return subcourseId;
+    public String getSubcourseID() {
+        return subcourseID;
     }
 
-    public void setSubcourseId(String subcourseId) {
-        this.subcourseId = subcourseId;
+    public void setSubcourseID(String subcourseID) {
+        this.subcourseID = subcourseID;
     }
-    public ArrayList<Subject> getSub() {
+    public ArrayList<SubCourse> getSub() {
         return sub;
     }
 
-    public void setSub(ArrayList<Subject> sub) {
+    public void setSub(ArrayList<SubCourse> sub) {
         this.sub = sub;
     }
 

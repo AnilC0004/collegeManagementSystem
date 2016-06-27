@@ -69,7 +69,7 @@ body {
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="HomePage1.jsp">HOME</a></li>
+					<li><a href="Home.jsp">HOME</a></li>
 					<li><a href="#about">ABOUT US</a></li>
 					<li><a href="Contact.jsp">CONTACT</a></li>
 					<li><a href="LoginPage.jsp">LOGIN</a></li>
@@ -94,12 +94,11 @@ body {
 
 	<script type="text/javascript">
 $(document).ready(function(){
-	$("#alrt").fadeTo(1000,0);
-	});
+	//$("#alrt").fadeTo(1000,0);
 	$('#loginBtn').on('click',function(){
 		var islogin='';
 		$.post(
-			'Validate',
+			'LoginValidate',
 			{
 				'emailID':$('#emailID').val(),
 				'password':$('#password').val()
@@ -115,8 +114,8 @@ $(document).ready(function(){
 				}	
 			});
 			return false;
-	 });
-});
+			});
+	});
 </script>
 </body>
 </html>

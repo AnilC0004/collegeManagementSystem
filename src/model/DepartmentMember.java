@@ -4,7 +4,7 @@ public abstract class DepartmentMember extends CollegeMember{
 
 	private String deptNo;
 	private String deptName;
-	private int StudentCount;
+	private int studentCount;
 	private int facultyCount;
 	
 	public String getDeptNo() {
@@ -20,10 +20,10 @@ public abstract class DepartmentMember extends CollegeMember{
 		this.deptName = deptName;
 	}
 	public int getStudentCount() {
-		return StudentCount;
+		return studentCount;
 	}
 	public void setStudentCount(int studentCount) {
-		StudentCount = studentCount;
+		this.studentCount = studentCount;
 	}
 	public int getFacultyCount() {
 		return facultyCount;
